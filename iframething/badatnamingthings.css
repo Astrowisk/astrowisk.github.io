@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+}
+
+.tabs {
+    background-color: rgb(4, 8, 31);
+}
+
+button input {
+    font-family:'Nunito','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    width: 4em;
+    height: 2em;
+}
+
+input {
+    width: 30vw;
+    height: 1.5em;
+}
+
+.page {
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 90vw;
+    height: 80vh;
+    margin: auto;
+    display: block;
+}
+
+h1 {
+    color: white;
+    font-family:'Nunito','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#pages {
+    padding: 2vh;
+}
+
+html {
+    background-color: black;
+}
+
+.hiddenpage {
+    display: none;
+}
