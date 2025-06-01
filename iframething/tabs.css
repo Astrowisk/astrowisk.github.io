@@ -1,0 +1,37 @@
+.tab {
+    border-color: white;
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.tabbutton {
+    border: none;
+    width: 8em;
+    height: 2em;
+}
+
+.xbutton {
+    width: 2em;
+    height: 2em;
+    border:solid;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 3px;
+    border-width: 1px;
+    background-color:rgb(183, 63, 63);
+}
+
+.xbutton:hover {
+    background-color: rgb(171, 86, 86);
+}
+
+#tabbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

@@ -3,30 +3,32 @@
     <head>
         <title>bad iframe test</title>
         <link rel="stylesheet" type="text/css" href="badatnamingthings.css">
+        <link rel="stylesheet" type="text/css" href="tabs.css">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito">
     </head>
     <body>
         <script src="terribleiframetabthing.js"></script>
-        <h1>bad iframe test</h1>
+        <span>bad iframe test</span>
+        <button onclick="reload()" style="width: 8em">refresh page</button>
         <div id="main">
             <div id="topbar">
-                <div id="tabs">
-                    <button>
-                        test
-                        <button>
-                            x
-                        </button>
-                    </button>
+                <div id="tabbar">
+                    <div id="tabcontainer">
+                </div>
+                <button onclick="newTab()" id="newTabButton" style="width: 2em; height: 2em;">+</button>
                 </div>
                 <div id="urlbar">
-                    <input type="text" id="urlinput">
+                    <input type="text" id="urlinput" placeholder="https://">
                     <button onclick="setUrl()">go</button>
-                    <button onclick="newTab()">+</button>
                     <button onclick="setUrlToDefault()">home</button>
+                    <button onclick="reloadTab()" style="width:6em">refresh</button>
+                    <button onclick="makeLink()" style="width:8em">make me a link</button>
                 </div>
             </div>
             <div id="pages">
             </div>
+            <a id="link"></a>
+            <span id="output"></span>
         </div>
     </body>
 </html>

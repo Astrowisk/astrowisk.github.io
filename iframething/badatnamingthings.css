@@ -2,14 +2,11 @@ body {
     background-color: black;
 }
 
-.tabs {
-    background-color: rgb(4, 8, 31);
-}
-
-button input {
+button, input {
     font-family:'Nunito','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(59, 59, 59);
     color: white;
+    background-color: black;
     border-color: white;
     border-width: 1px;
     border-radius: 3px;
@@ -17,6 +14,11 @@ button input {
     width: 4em;
     height: 2em;
 }
+
+button:hover {
+    background-color: rgb(66, 66, 66);
+}
+
 
 input {
     width: 30vw;
@@ -34,7 +36,7 @@ input {
     display: block;
 }
 
-h1 {
+* {
     color: white;
     font-family:'Nunito','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
