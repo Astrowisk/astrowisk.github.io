@@ -3,6 +3,7 @@
     <head>
         <title>e</title>
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Libre+Barcode+39">
     </head>
     <body>
         <style>
@@ -10,17 +11,34 @@
                 background-color: black;
             }
 
-            p {
+            * {
+                font-family: 'Nunito','Franklin Gothic Medium', 'Arial   Narrow', Arial, sans-serif;
                 color: white;
             }
-
-            * {
-                font-family: 'Nunito','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            }
         </style>
+
+        <script>
+            setInterval(() => {
+                let link = document.getElementById("iframelink");
+                let str = "my really peak iframe test"
+
+                if (Math.round(Math.random()) == 0) {
+                    link.innerHTML = str;
+                } else {
+                    link.innerHTML = str.replace(str.charAt(Math.round(Math.random()*str.length)),str.charAt(Math.round(Math.random()*str.length)))
+                }
+
+                if (Math.round(Math.random()*3) == 0) {
+                    link.style = "font-family: 'Libre Barcode 39','Franklin Gothic Medium', 'Arial   Narrow', Arial, sans-serif; font-size: "+ (Math.random()*7)+"vw";
+                } else {
+                    link.style = "font-family: 'Nunito','Franklin Gothic Medium', 'Arial   Narrow', Arial, sans-serif";
+                }
+                
+            },100);
+        </script>
         
-        <p>test</p>
+        <h1>peak very professional site</h1>
         
-        <a href="iframething/index.html">iframe test</a>
+        <a href="iframething/index.html" id="iframelink">my really peak iframe test</a>
     </body>
 </html>
