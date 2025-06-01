@@ -131,7 +131,7 @@ function closeTab(index) {
     }
 
     const removePage = pages[index];
-    console.log(removePage);
+    //console.log(removePage);
 
     exitFullscreen();
     
@@ -143,7 +143,7 @@ function closeTab(index) {
         currentPage = 0;
     } 
 
-    console.log(currentPage)
+    //console.log(currentPage)
 
     updateTabs();
 }
@@ -165,7 +165,7 @@ function newTab() {
 }
 
 function switchPage(index) {
-    console.log("swited to page: "+index);
+    //console.log("swited to page: "+index);
     pages[currentPage].classList.replace("page","hiddenpage");
     pages[index].classList.replace("hiddenpage","page");
     currentPage = index;
