@@ -2,7 +2,6 @@ const defaultUrl = "https://www.google.com/search?igu=1";
 let pages = [];
 let currentPage = 0;
 
-
 function setUrl() {
     let url
 
@@ -14,6 +13,29 @@ function setUrl() {
 
     pages[currentPage].src = url.href;
     updateTabs();
+}
+
+function toggleFullscreen() {
+    let page = pages[currentPage];
+    if (!page.classList.contains("fullscreenpage")) {
+        enterFullscreen();
+    } else {
+        exitFullscreen();
+    }
+}
+function enterFullscreen() {
+    let page = pages[currentPage];
+
+    page.classList.add("fullscreenpage");
+    document.getElementById("fullscreenbutton").style = "display:inline";
+}
+
+function exitFullscreen() {
+    //lazy method
+    let page = pages[currentPage];
+
+    page.classList.remove("fullscreenpage");
+    document.getElementById("fullscreenbutton").style = "display:none";
 }
 
 function makeLink() {
@@ -57,6 +79,7 @@ function createTabButton(index) {
     if (!(pages.length == 1)) {
         tab.appendChild(xbutton);
     }
+    
     //append to tab list
     document.getElementById("tabcontainer").appendChild(tab);
 }
@@ -81,10 +104,16 @@ function updateTabs() {
         createTabButton(pageindex);
 
         //bad but works
-        if (pageindex != currentPage) {
+
+        //if the page we're looping over is not the current page and has class page (and page is displayed)
+        if ((pageindex != currentPage) && (pages[pageindex].classList.contains("page"))) {
+            //hide page
              pages[pageindex].classList.replace("page","hiddenpage");
         }
-        else {
+
+        //if the page we're looping over isthe current page and has class hiddenpage
+        else if ((pageindex == currentPage)&&(pages[pageindex].classList.contains("hiddenpage"))){
+            //show page
             pages[pageindex].classList.replace("hiddenpage","page");
         }
     }
@@ -103,6 +132,8 @@ function closeTab(index) {
 
     const removePage = pages[index];
     console.log(removePage);
+
+    exitFullscreen();
     
     //remove tab from dom
     document.getElementById("pages").removeChild(removePage);
